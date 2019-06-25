@@ -30,7 +30,7 @@
 
 [Sources]
   PchSmmLib.c
-
+  CommonHeader.h
 
 [Packages]
   MdePkg/MdePkg.dec
