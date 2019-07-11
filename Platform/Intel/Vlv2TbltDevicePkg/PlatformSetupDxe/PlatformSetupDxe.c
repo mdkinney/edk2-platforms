@@ -1,12 +1,8 @@
 /** @file
 
-  Copyright (c) 2004  - 2014, Intel Corporation. All rights reserved.<BR>
-                                                                                   
+  Copyright (c) 2004  - 2019, Intel Corporation. All rights reserved.<BR>
+
   SPDX-License-Identifier: BSD-2-Clause-Patent
-
-                                                                                   
-
-Module Name:
 
 **/
 
@@ -621,8 +617,6 @@ SystemConfigCallback (
                           );
         }
 
-        FreePool (FakeNvData);
-
         DataSize = sizeof(OsSelection);
         Status = gRT->GetVariable(
                         L"OsSelection",
@@ -642,6 +636,8 @@ SystemConfigCallback (
                           &OsSelection
                           );
         }
+
+        FreePool (FakeNvData);
 
         //
         // Reset system
